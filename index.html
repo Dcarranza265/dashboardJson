@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="estilos.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="d-flex justify-content-center align-items-center">
+    <div class="container d-flex justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-12">
+          <div class="card rounded-4" id="infoPersonal" style="background:hsl(246, 80%, 60%) ;">
+            <div class="card-body contInfo">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+                    <img src="images/image-jeremy.png" alt="" class="img-fluid" style="width: 70px;" >
+                  </div>
+                  <div class="col-md-9 col-6  detalleInfo" >
+                    <h6 class="card-subtitle mb-2">Report for</h6>
+                    <h2>Jeremy Robson</h2>
+                  </div>
+                </div>                
+              </div>                          
+            </div>            
+          </div>
+          <div class="card d-flex flex-column rounded-4" id="frecuencia" style="background:hsl(235, 46%, 20%) ;">
+            <div class="p-2 mt-5 px-4 flex-fill" id="btnDaily" role="button">Daily</div>
+            <div class="p-2 px-4 flex-fill" role="button" id="btnWeekly">Weekly</div>
+            <div class="p-2 px-4 flex-fill" role="button" id="btnMonthly">Monthly</div>            
+          </div>
+         
+
+        </div>
+        <div class="col-lg-9 col-md-8 col-12">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card d-flex flex-row-reverse rounded-4" id="workFondo" style="background:hsl(15, 100%, 70%);">
+                <img src="images/icon-work.svg" style="height:10vh;" alt="">            
+              </div>
+              <div class="card rounded-4 cardPrincipal" id="cardWork" style="background:hsl(235, 46%, 20%) ;">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between" >
+                    <p>Work</p> <span>...</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12">
+                      <h1><span class="horasActuales">32</span> hrs</h1>                      
+                    </div>
+                    <div class="col-6 col-md-12">
+                      <span>Last <span class="frecuency">week</span> - <span class="horasAnteriores">36</span> hrs</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card d-flex flex-row-reverse rounded-4 fondo" id="workFondo" style="background:hsl(195, 74%, 62%);">
+                <img src="images/icon-play.svg" style="height:10vh;" alt="">            
+              </div>
+              <div class="card rounded-4 cardPrincipal" id="cardWork" style="background:hsl(235, 46%, 20%) ;">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between" >
+                    <p>Play</p> <span>...</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12">
+                      <h1><span class="horasActuales">32</span> hrs</h1>                      
+                    </div>
+                    <div class="col-6 col-md-12">
+                      <span>Last <span class="frecuency">week</span> - <span class="horasAnteriores">36</span> hrs</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card d-flex flex-row-reverse rounded-4 fondo" id="workFondo" style="background:hsl(348, 100%, 68%);">
+                <img src="images/icon-study.svg" style="height:10vh;" alt="">            
+              </div>
+              <div class="card rounded-4 cardPrincipal" id="cardWork" style="background:hsl(235, 46%, 20%) ;">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between" >
+                    <p>Study</p> <span>...</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12">
+                      <h1><span class="horasActuales">32</span> hrs</h1>                      
+                    </div>
+                    <div class="col-6 col-md-12">
+                      <span>Last <span class="frecuency">week</span> - <span class="horasAnteriores">36</span> hrs</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card d-flex flex-row-reverse rounded-4 fondo" id="workFondo" style="background:hsl(145, 58%, 55%);">
+                <img src="images/icon-exercise.svg" style="height:10vh;" alt="">            
+              </div>
+              <div class="card rounded-4 cardPrincipal" id="cardWork" style="background:hsl(235, 46%, 20%) ;">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between" >
+                    <p>Exercise</p> <span>...</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12">
+                      <h1><span class="horasActuales">32</span> hrs</h1>                      
+                    </div>
+                    <div class="col-6 col-md-12">
+                      <span>Last <span class="frecuency">week</span> - <span class="horasAnteriores">36</span> hrs</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card d-flex flex-row-reverse rounded-4 fondo" id="workFondo" style="background:hsl(264, 64%, 52%);">
+                <img src="images/icon-social.svg" style="height:10vh;" alt="">            
+              </div>
+              <div class="card rounded-4 cardPrincipal" id="cardWork" style="background:hsl(235, 46%, 20%) ;">
+                <div class="card-body">
+                  <div class="d-flex justify-content-between" >
+                    <p>Social</p> <span>...</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12">
+                      <h1><span class="horasActuales">32</span> hrs</h1>                      
+                    </div>
+                    <div class="col-6 col-md-12">
+                      <span>Last <span class="frecuency">week</span> - <span class="horasAnteriores">36</span> hrs</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-3">
+              <div class="card d-flex flex-row-reverse rounded-4 fondo" id="workFondo" style="background:hsl(43, 84%, 65%);">
+                <img src="images/icon-self-care.svg" style="height:10vh;" alt="">            
+              </div>
+              <div class="card rounded-4 cardPrincipal" id="cardWork" style="background:hsl(235, 46%, 20%) ;" >
+                <div class="card-body">
+                  <div class="d-flex justify-content-between" >
+                    <p>Self Care</p> <span>...</span>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 col-md-12">
+                      <h1><span class="horasActuales">32</span> hrs</h1>                      
+                    </div>
+                    <div class="col-6 col-md-12">
+                      <span>Last <span class="frecuency">week</span> - <span class="horasAnteriores">36</span> hrs</span>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+  </main>
+  <script src="funciones.js"></script> 
+  
+</body>
+</html>

@@ -1,0 +1,61 @@
+main{   
+    background: hsl(226, 43%, 10%);
+    min-height: 100vh;
+    width: 100%;
+    
+    
+}
+#frecuencia{
+    top: -35px ; 
+}
+#infoPersonal{
+    z-index: 1;
+}
+
+.cardPrincipal{
+    bottom: 20px;
+}
+
+.contInfo{
+    padding-bottom: 3rem !important;
+}
+
+.detalleInfo{
+    margin-top: 3rem !important;
+    padding-bottom: 0.5rem !important;
+}
+
+.fondo{
+    height:60px ;
+}
+
+.fondo img{
+    left: 100px;
+}
+
+h6, h2, h1, p, span, .p-2{
+    color: antiquewhite !important;
+}
+
+#frecuencia :hover{
+    background: hsl(235, 45%, 61%) !important;
+}
+
+@media (max-width: 768px) { 
+    #frecuencia{
+        flex-direction: row !important;
+    }
+    #btnWeekly, #btnMonthly{
+        margin-top: 3rem !important;
+    }
+    .contInfo{        
+        padding-bottom: 0rem !important ;
+    }
+    .detalleInfo{
+        margin-top: 0rem !important;
+    }
+    #infoPersonal{
+        padding-bottom: 1rem !important;
+    }
+    
+}
